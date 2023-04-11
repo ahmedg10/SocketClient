@@ -13,8 +13,7 @@
     1. 60044 23-04-10 22:48:21 50 0 0 216.6 UTC(NIST) * 
 
 3. server tcpbin.com / port 4242 (Echo Service)
-    1. Without thread, I got nothing
-    2. With thread: Apr 10, 2023 4:11:46 PM TCPClient main
+    1. With thread: Apr 10, 2023 4:11:46 PM TCPClient main
                     INFO: Connected to server tcpbin.com on port 4242
                     Apr 10, 2023 4:11:46 PM TCPClient main
                     INFO: Connected to server tcpbin.com on port 4242
@@ -42,3 +41,4 @@ Allow different parts of a program to run concurrently or at the same time. It i
 1. Synthax of Java and using socket, input and output stream classes.  I had to do a lot of googling and looking up. 
 2. Usuage of out.flush -> This is part of the outputstream class so when you write to the server it doesn't send until the buffer (temp holding area for info) is full. However, the flush will pretty much force send things in the buffer to the server after the line is ended. 
 3. Logger synthax: What I found is that the logger gives us information about the network connection. However, there is a thing called levels in which depending on a input value you put in it identifies if you want more information or not. For instance, if you but -v in console that it tells to send the logger.info rather than the logger.warning (which is just the important stuff). Later, in the code we put in manual informatio of what happens in the info and it was returned to us. 
+4. I sadly was not able to figure out how to get a response back after the command line input is send to the server. I don't get the echo back from the server. I only get it from the echo server. 
